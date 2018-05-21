@@ -1,0 +1,40 @@
+-----------------------------------------EJECUTANDO BENCHMARK N=30-----------------------------------------
+benchmarking fibonacci/fib_memoTrie
+time                 82.05 ns   (81.41 ns .. 82.57 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 82.16 ns   (81.74 ns .. 82.67 ns)
+std dev              1.586 ns   (1.287 ns .. 2.172 ns)
+variance introduced by outliers: 26% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=15000-----------------------------------------
+benchmarking fibonacci/fib_memoTrie
+time                 217.1 ns   (215.5 ns .. 218.3 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 217.4 ns   (216.4 ns .. 218.2 ns)
+std dev              3.055 ns   (2.368 ns .. 3.877 ns)
+variance introduced by outliers: 15% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=50000-----------------------------------------
+benchmarking fibonacci/fib_memoTrie
+time                 259.0 ns   (257.2 ns .. 260.3 ns)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 257.7 ns   (256.1 ns .. 258.9 ns)
+std dev              4.748 ns   (4.034 ns .. 5.765 ns)
+variance introduced by outliers: 23% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=100000-----------------------------------------
+benchmarking fibonacci/fib_memoTrie
+time                 272.4 ns   (271.5 ns .. 273.3 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 272.8 ns   (271.6 ns .. 273.7 ns)
+std dev              3.504 ns   (2.713 ns .. 4.655 ns)
+variance introduced by outliers: 12% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=130000-----------------------------------------
+benchmarking fibonacci/fib_memoTrie
+time                 264.6 ns   (263.2 ns .. 266.0 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 262.2 ns   (260.6 ns .. 263.7 ns)
+std dev              5.119 ns   (4.312 ns .. 6.017 ns)
+variance introduced by outliers: 25% (moderately inflated)
+

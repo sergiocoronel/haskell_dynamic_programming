@@ -1,0 +1,81 @@
+----EJECUTANDO BENCHMARK [(4, 12), (2, 2), (2, 1), (1, 1), (10, 4)] 15--------------------------------------------------------------------------------------
+benchmarking Mochila/runMemoKnapsack2
+time                 2.782 μs   (2.772 μs .. 2.792 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 2.785 μs   (2.771 μs .. 2.802 μs)
+std dev              50.48 ns   (36.18 ns .. 75.47 ns)
+variance introduced by outliers: 19% (moderately inflated)
+
+benchmarking Mochila/runMemoKnapsack3
+time                 2.371 μs   (2.352 μs .. 2.388 μs)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 2.382 μs   (2.370 μs .. 2.392 μs)
+std dev              37.07 ns   (29.62 ns .. 46.52 ns)
+variance introduced by outliers: 15% (moderately inflated)
+
+benchmarking Mochila/runMemoKnapsack4
+time                 520.4 ns   (518.8 ns .. 521.6 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 515.5 ns   (512.4 ns .. 518.3 ns)
+std dev              9.585 ns   (7.850 ns .. 11.35 ns)
+variance introduced by outliers: 22% (moderately inflated)
+
+----EJECUTANDO BENCHMARK [(4, 12), (2, 2), (2, 1), (1, 1), (10, 4), (4, 12), (2, 2), (2, 1), (1, 1), (10, 4), (4, 12), (2, 2), (2, 1), (1, 1), (10, 4)] 50--
+benchmarking Mochila/runMemoKnapsack2
+time                 116.5 μs   (115.3 μs .. 117.6 μs)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 116.6 μs   (116.0 μs .. 117.1 μs)
+std dev              1.847 μs   (1.288 μs .. 2.299 μs)
+
+benchmarking Mochila/runMemoKnapsack3
+time                 58.67 μs   (58.43 μs .. 58.88 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 58.69 μs   (58.42 μs .. 58.93 μs)
+std dev              876.4 ns   (681.4 ns .. 1.143 μs)
+
+benchmarking Mochila/runMemoKnapsack4
+time                 11.17 μs   (11.14 μs .. 11.20 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 11.18 μs   (11.12 μs .. 11.25 μs)
+std dev              218.7 ns   (160.9 ns .. 297.2 ns)
+variance introduced by outliers: 18% (moderately inflated)
+
+----EJECUTANDO BENCHMARK [(4, 12), (2, 2), (2, 1), (1, 1), (10, 4),(4, 12), (2, 2), (2, 1), (1, 1), (10, 4),(4, 12), (2, 2), (2, 1), (1, 1), (10, 4), (5, 5), (3,8), (1,1), (9,1), (7, 3), (5, 5), (3,8), (1,1), (9,1), (7, 3)] 100-
+benchmarking Mochila/runMemoKnapsack2
+time                 396.2 μs   (392.2 μs .. 400.2 μs)
+                     0.999 R²   (0.999 R² .. 1.000 R²)
+mean                 396.4 μs   (394.0 μs .. 398.7 μs)
+std dev              7.832 μs   (6.782 μs .. 9.153 μs)
+variance introduced by outliers: 12% (moderately inflated)
+
+benchmarking Mochila/runMemoKnapsack3
+time                 196.6 μs   (195.3 μs .. 197.8 μs)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 196.4 μs   (195.4 μs .. 197.2 μs)
+std dev              3.051 μs   (2.391 μs .. 4.187 μs)
+
+benchmarking Mochila/runMemoKnapsack4
+time                 41.27 μs   (40.93 μs .. 41.52 μs)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 41.28 μs   (41.08 μs .. 41.44 μs)
+std dev              600.4 ns   (445.5 ns .. 767.5 ns)
+
+----EJECUTANDO BENCHMARK [(4, 12), (2, 2), (2, 1), (1, 1), (10, 4),(4, 12), (2, 2), (2, 1), (1, 1), (10, 4),(4, 12), (2, 2), (2, 1), (1, 1), (10, 4), (5, 5), (3,8), (1,1), (9,1), (7, 3), (5, 5), (3,8), (1,1), (9,1), (7, 3), (10, 4), (5, 5), (3,8), (1,1), (9,1), (7, 3), (5, 5), (3,8), (1,1), (9,1), (7, 3)]) 140-
+benchmarking Mochila/runMemoKnapsack2
+time                 1.042 ms   (1.038 ms .. 1.045 ms)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 1.040 ms   (1.036 ms .. 1.043 ms)
+std dev              11.53 μs   (8.421 μs .. 16.22 μs)
+
+benchmarking Mochila/runMemoKnapsack3
+time                 501.1 μs   (498.4 μs .. 504.4 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 500.5 μs   (498.1 μs .. 503.0 μs)
+std dev              8.161 μs   (6.374 μs .. 10.93 μs)
+
+benchmarking Mochila/runMemoKnapsack4
+time                 105.3 μs   (104.9 μs .. 105.6 μs)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 105.3 μs   (105.0 μs .. 105.5 μs)
+std dev              896.2 ns   (699.1 ns .. 1.168 μs)
+

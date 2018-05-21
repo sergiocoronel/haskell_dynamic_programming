@@ -1,0 +1,72 @@
+-----------------------------------------EJECUTANDO BENCHMARK N=30-----------------------------------------
+benchmarking fibonacci/_fib
+time                 219.2 ns   (218.5 ns .. 219.8 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 218.3 ns   (216.9 ns .. 219.6 ns)
+std dev              4.698 ns   (3.869 ns .. 5.800 ns)
+variance introduced by outliers: 29% (moderately inflated)
+
+benchmarking fibonacci/fib_memoize
+time                 216.3 ns   (215.1 ns .. 217.6 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 216.7 ns   (215.7 ns .. 217.5 ns)
+std dev              3.167 ns   (2.376 ns .. 4.407 ns)
+variance introduced by outliers: 16% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=15000-----------------------------------------
+benchmarking fibonacci/_fib
+time                 698.5 ns   (696.2 ns .. 701.0 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 698.3 ns   (695.4 ns .. 700.2 ns)
+std dev              7.826 ns   (5.697 ns .. 11.17 ns)
+
+benchmarking fibonacci/fib_memoize
+time                 688.1 ns   (682.9 ns .. 694.1 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 684.4 ns   (680.6 ns .. 688.3 ns)
+std dev              12.77 ns   (11.49 ns .. 14.39 ns)
+variance introduced by outliers: 22% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=50000-----------------------------------------
+benchmarking fibonacci/_fib
+time                 816.7 ns   (813.1 ns .. 820.7 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 816.1 ns   (813.1 ns .. 818.8 ns)
+std dev              10.21 ns   (7.503 ns .. 14.56 ns)
+variance introduced by outliers: 11% (moderately inflated)
+
+benchmarking fibonacci/fib_memoize
+time                 805.6 ns   (798.7 ns .. 811.9 ns)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 806.2 ns   (801.4 ns .. 810.5 ns)
+std dev              14.94 ns   (12.24 ns .. 17.84 ns)
+variance introduced by outliers: 21% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=100000-----------------------------------------
+benchmarking fibonacci/_fib
+time                 856.9 ns   (851.9 ns .. 861.8 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 859.2 ns   (856.2 ns .. 861.8 ns)
+std dev              9.667 ns   (7.595 ns .. 12.57 ns)
+
+benchmarking fibonacci/fib_memoize
+time                 841.2 ns   (834.6 ns .. 847.8 ns)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 842.2 ns   (837.0 ns .. 848.8 ns)
+std dev              20.13 ns   (16.11 ns .. 24.68 ns)
+variance introduced by outliers: 31% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=130000-----------------------------------------
+benchmarking fibonacci/_fib
+time                 840.2 ns   (838.2 ns .. 841.9 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 840.3 ns   (837.7 ns .. 843.0 ns)
+std dev              9.104 ns   (6.483 ns .. 13.00 ns)
+
+benchmarking fibonacci/fib_memoize
+time                 833.8 ns   (826.4 ns .. 839.0 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 835.4 ns   (832.2 ns .. 838.3 ns)
+std dev              10.02 ns   (7.667 ns .. 13.65 ns)
+variance introduced by outliers: 10% (moderately inflated)
+

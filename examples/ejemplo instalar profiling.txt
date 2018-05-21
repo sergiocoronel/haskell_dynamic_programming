@@ -1,0 +1,5 @@
+ cabal install -p statistics-0.14.0.2 --force-reinstalls --reinstall
+
+RECEIVED_TIME VARCHAR
+TIMESTAMPMAXINI VARCHAR, ALERTAS INT,
+TIMESTAMP VARCHAR,

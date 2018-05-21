@@ -1,0 +1,112 @@
+-----------------------------------------EJECUTANDO BENCHMARK N=40-----------------------------------------
+benchmarking fibonacci/fibNaive
+time                 1.193 s    (1.180 s .. 1.215 s)
+                     1.000 R²   (1.000 R² .. NaN R²)
+mean                 1.193 s    (1.187 s .. 1.198 s)
+std dev              6.190 ms   (2.925 ms .. 8.450 ms)
+allocated:           1.000 R²   (1.000 R² .. 1.000 R²)
+  iters              1.637e9    (1.637e9 .. 1.637e9)
+  y                  -372.000   (-10472.000 .. 1648.000)
+variance introduced by outliers: 19% (moderately inflated)
+
+benchmarking fibonacci/memoized_fib
+time                 73.58 ns   (73.31 ns .. 73.88 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 73.66 ns   (73.35 ns .. 74.04 ns)
+std dev              1.123 ns   (902.9 ps .. 1.545 ns)
+allocated:           0.000 R²   (0.000 R² .. 0.017 R²)
+  iters              -2.834e-5  (-3.027e-4 .. 3.437e-4)
+  y                  2446.945   (2247.942 .. 2648.451)
+variance introduced by outliers: 18% (moderately inflated)
+
+benchmarking fibonacci/memoized_fib_array
+time                 783.8 ns   (779.4 ns .. 788.0 ns)
+                     1.000 R²   (1.000 R² .. 1.000 R²)
+mean                 781.7 ns   (778.3 ns .. 784.4 ns)
+std dev              9.550 ns   (7.761 ns .. 11.39 ns)
+allocated:           1.000 R²   (1.000 R² .. 1.000 R²)
+  iters              2368.001   (2367.997 .. 2368.005)
+  y                  2440.348   (2213.445 .. 2686.252)
+variance introduced by outliers: 11% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=15000-----------------------------------------
+benchmarking best algo/memoized_fib
+time                 164.7 μs   (163.6 μs .. 166.1 μs)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 165.1 μs   (164.4 μs .. 165.9 μs)
+std dev              2.608 μs   (2.129 μs .. 3.266 μs)
+allocated:           0.000 R²   (0.000 R² .. 0.041 R²)
+  iters              -5.662e-2  (-0.851 .. 0.758)
+  y                  2442.284   (2089.741 .. 2870.337)
+
+benchmarking best algo/memoized_fib_array
+time                 5.114 ms   (5.080 ms .. 5.158 ms)
+                     1.000 R²   (0.999 R² .. 1.000 R²)
+mean                 4.972 ms   (4.940 ms .. 5.003 ms)
+std dev              97.37 μs   (80.38 μs .. 124.3 μs)
+allocated:           1.000 R²   (1.000 R² .. 1.000 R²)
+  iters              1.187e7    (1.187e7 .. 1.187e7)
+  y                  1648.000   (1648.000 .. 1648.000)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=50000-----------------------------------------
+benchmarking best algo/memoized_fib
+time                 1.060 ms   (1.038 ms .. 1.085 ms)
+                     0.995 R²   (0.992 R² .. 0.998 R²)
+mean                 1.041 ms   (1.026 ms .. 1.060 ms)
+std dev              59.78 μs   (45.88 μs .. 84.78 μs)
+allocated:           0.001 R²   (0.000 R² .. 0.086 R²)
+  iters              0.681      (-5.590 .. 7.338)
+  y                  2393.917   (1858.750 .. 3016.740)
+variance introduced by outliers: 47% (moderately inflated)
+
+benchmarking best algo/memoized_fib_array
+time                 39.84 ms   (39.07 ms .. 40.47 ms)
+                     0.999 R²   (0.998 R² .. 1.000 R²)
+mean                 39.83 ms   (38.48 ms .. 40.79 ms)
+std dev              2.391 ms   (1.105 ms .. 4.426 ms)
+allocated:           1.000 R²   (1.000 R² .. 1.000 R²)
+  iters              1.163e8    (1.163e8 .. 1.163e8)
+  y                  2779.429   (1134.589 .. 4749.152)
+variance introduced by outliers: 19% (moderately inflated)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=100000-----------------------------------------
+benchmarking best algo/memoized_fib
+time                 1.547 ms   (1.522 ms .. 1.573 ms)
+                     0.997 R²   (0.994 R² .. 0.998 R²)
+mean                 1.552 ms   (1.527 ms .. 1.587 ms)
+std dev              96.48 μs   (69.35 μs .. 156.8 μs)
+allocated:           -Infinity R² (NaN R² .. NaN R²)
+  iters              0.000      (-7.866e-15 .. 7.154e-15)
+  y                  1648.000   (1648.000 .. 1648.000)
+variance introduced by outliers: 47% (moderately inflated)
+
+benchmarking best algo/memoized_fib_array
+time                 82.48 ms   (80.56 ms .. 85.30 ms)
+                     0.998 R²   (0.995 R² .. 1.000 R²)
+mean                 81.51 ms   (80.45 ms .. 82.69 ms)
+std dev              1.995 ms   (1.398 ms .. 2.974 ms)
+allocated:           1.000 R²   (1.000 R² .. 1.000 R²)
+  iters              4.519e8    (4.519e8 .. 4.519e8)
+  y                  1912.000   (3.928 .. 4626.319)
+
+-----------------------------------------EJECUTANDO BENCHMARK N=130000-----------------------------------------
+benchmarking best algo/memoized_fib
+time                 1.976 ms   (1.853 ms .. 2.111 ms)
+                     0.983 R²   (0.974 R² .. 0.997 R²)
+mean                 1.932 ms   (1.893 ms .. 2.004 ms)
+std dev              169.0 μs   (114.8 μs .. 251.7 μs)
+allocated:           0.001 R²   (0.000 R² .. 0.089 R²)
+  iters              1.285      (-9.751 .. 13.730)
+  y                  2344.014   (1748.809 .. 2995.439)
+variance introduced by outliers: 62% (severely inflated)
+
+benchmarking best algo/memoized_fib_array
+time                 495.3 ms   (436.0 ms .. 530.5 ms)
+                     0.998 R²   (0.997 R² .. 1.000 R²)
+mean                 515.1 ms   (503.7 ms .. 521.2 ms)
+std dev              10.93 ms   (1.741 ms .. 14.18 ms)
+allocated:           1.000 R²   (1.000 R² .. 1.000 R²)
+  iters              7.586e8    (7.586e8 .. 7.586e8)
+  y                  1648.000   (1648.000 .. NaN)
+variance introduced by outliers: 19% (moderately inflated)
+
