@@ -23,21 +23,22 @@ editDistance xs ys = dist m n
                       1 + dist (i-1) (j-1)
                     ]
 
-editDistance_list :: Eq a => [a] -> [a] -> Int
-editDistance_list xs ys = dist m n
+editDistance_list_2 :: Eq a => [a] -> [a] -> Int
+editDistance_list_2 xs ys = (kList !! m) !! n
   where
-  (m,n) = (length xs, length ys)
-
-  dist :: Int -> Int -> Int
-  dist 0 j = j
-  dist i 0 = i
-  dist i j
-      | xs !! (i-1) == ys !! (j-1) = dist (i-1) (j-1) --Si son iguales pasó a la siguiente letra
-      | otherwise = minimum [
-                      (dist (i-1) j) + 1,
-                      (dist i (j-1)) + 1,
-                      1 + dist (i-1) (j-1)
-                    ]
+    (m,n) = (length xs, length ys)
+    x     = array (1,m) (zip [1..] xs)
+    y     = array (1,n) (zip [1..] ys)
+    kList = [[ dist i j | j <- [0..n]] | i <- [0..m]]
+    dist 0 j = j
+    dist i 0 = i
+    dist i j
+      | x ! i == y ! j = (kList !! (i-1)) !! (j-1)
+      | otherwise =  minimum [
+                        ((kList !! (i-1)) !! j) + 1,
+                        ((kList !! i) !! (j-1)) + 1,
+                        1 + (kList !! (i-1)) !! (j-1)
+                      ]
 
 memoeditDistance :: Eq a => [a] -> [a] -> Int
 memoeditDistance xs ys = table ! (m,n)
@@ -63,7 +64,7 @@ memoeditDistance xs ys = table ! (m,n)
 benchmark = defaultMain [
     bgroup "Edit Distance" [
               bench "editDistance" $ whnf (editDistance "Probando") "Proforma"
-             , bench "editDistance_list" $ whnf (editDistance_list "Probando") "Proforma"
+             , bench "editDistance_list_2" $ whnf (editDistance_list_2 "Probando") "Proforma"
              , bench "memoeditDistance" $ whnf (memoeditDistance "Probando") "Proforma"
          ]
     ]
@@ -71,14 +72,15 @@ benchmark = defaultMain [
 benchmark2 = defaultMain [
     bgroup "Edit Distance" [
               bench "editDistance" $ whnf (editDistance "PalabraLarga") "LargaAntena"
-             , bench "editDistance_list" $ whnf (editDistance_list "PalabraLarga") "LargaAntena"
+             , bench "editDistance_list_2" $ whnf (editDistance_list_2 "PalabraLarga") "LargaAntena"
              , bench "memoeditDistance" $ whnf (memoeditDistance "PalabraLarga") "LargaAntena"
           ]
     ]
 
 benchmark3 = defaultMain [
     bgroup "Mochila" [
-              bench "memoeditDistance" $ whnf (memoeditDistance "Habia una vez un algo") "Habia un algoritmo largo"
+              bench "editDistance_list_2" $ whnf (editDistance_list_2 "Habia una vez un algo") "Habia un algoritmo largo"
+              , bench "memoeditDistance" $ whnf (memoeditDistance "Habia una vez un algo") "Habia un algoritmo largo"
           ]
     ]
 
@@ -87,18 +89,24 @@ main = do
     putStrLn "----Resultado de comparar: Probando - Proforma---------------------------------------------";
     putStr "Edit Distance: ";
     putStr (show(editDistance "Probando" "Proforma"));
-    putStr " - Edit Distance usando List: ";
-    putStr (show(editDistance_list "Probando" "Proforma"));
+    putStr " - Edit Distance usando List2: ";
+    putStr (show(editDistance_list_2 "Probando" "Proforma"));
     putStr " - Memo Edit Distance: ";
     putStr (show(memoeditDistance "Probando" "Proforma"));
     putStrLn "";
     putStrLn "----Resultado de comparar: PalabraLarga - LargaAntena---------------------------";
     putStr "Edit Distance: ";
     putStr (show(editDistance "PalabraGrande" "NoEsTanGrandePalabra"));
-    putStr " - Edit Distance usando List: ";
-    putStr (show(editDistance_list "PalabraGrande" "NoEsTanGrandePalabra"));
+    putStr " - Edit Distance usando List2: ";
+    putStr (show(editDistance_list_2 "PalabraGrande" "NoEsTanGrandePalabra"));
     putStr " - Memo Edit Distance: ";
     putStr (show(memoeditDistance "PalabraGrande" "NoEsTanGrandePalabra"));
+    putStrLn "";
+    putStrLn "----Resultado de comparar: Habia una vez un algo - Habia un algoritmo largo---------------------------";
+    putStr " - Edit Distance usando List2: ";
+    putStr (show(editDistance_list_2 "Habia una vez un algo" "Habia un algoritmo largo"));
+    putStr " - Memo Edit Distance: ";
+    putStr (show(memoeditDistance "Habia una vez un algo" "Habia un algoritmo largo"));
     putStrLn "";
     putStrLn "----FIN Comparar, a continuación se ejecutaran los benchmark-------------------------------";
 
